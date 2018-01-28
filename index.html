@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head lang="en">
   <title>Number Guesser</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
 </head>
 <body>
-  <header>Number <span>Guesser</span></header>
+  <header>
+    <h1>Number <span id="header__title">Guesser</span></h1>
+  </header>
+
   <main>
     <label for="number__input"></label>
-    <input type="text" name="number" id="number__input">
-    <label for="guess__btn">Guess</label>
-    <input type="submit" name="guess" id="guess__btn">
-    <label for="clear__btn">Clear</label>
-    <input type="submit" name="clear" id="clear__btn">
+    <input type="text" name="number" id="number__input" placeholder="Enter your guess">
+
+    <div>
+      <label for="guess__btn"></label>
+      <input type="submit" name="guess" class="btn" id="guess__btn" value="Guess" disabled="true">
+
+      <label for="clear__btn"></label>
+      <input type="submit" name="clear" class="btn" id="clear__btn" value="Clear" disabled="true">
+    </div>
+
     <p>Your last guess was:</p>
-    <div>NUMBER</div>
-    <p>That is too high</p>
-    <label for="reset__btn">Reset</label>
-    <input type="submit" name="" id="reset__btn">
+    <p id="guess--display"></p>
+    <p id="compare--results"></p>
+
+    <label for="reset__btn"></label>
+    <input type="submit" name="" class="btn" id="reset__btn" value="Reset" disabled="true">
+
   </main>
+  <script type="text/javascript" src="scripts.js" style="javascript"></script>
 </body>
 </html>
