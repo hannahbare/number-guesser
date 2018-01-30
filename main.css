@@ -34,7 +34,7 @@ main {
   text-align: center;
 }
 
-#number__input {
+#userinput__min {
   padding: 1.2rem .4rem;
   margin: 2rem;
   height: 2rem;
@@ -43,7 +43,7 @@ main {
   font-size: 1.6rem;
 }
 
-#number__input::placeholder {
+#userinput__min::placeholder {
   color: #D0D2D3;
   font-size: 1.6rem;
 }

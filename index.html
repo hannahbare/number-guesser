@@ -11,16 +11,25 @@
   </header>
 
   <main>
-    <label for="number__input"></label>
-    <input type="text" name="number" id="number__input" placeholder="Enter your guess">
+    <form>
+      <p class="instruction__info">What two numbers would you like to guess between?</p>
+      <label for="userinput__min"></label>
+      <input type="text" name="number" id="userinput__low" placeholder="Enter your guess">
 
-    <div>
-      <label for="guess__btn"></label>
-      <input type="submit" name="guess" class="btn" id="guess__btn" value="Guess" disabled="true">
+      <!-- <label for="userinput__max"></label>
+      <input type="text" name="number" id="userinput__high" placeholder=""> -->
 
-      <label for="clear__btn"></label>
-      <input type="submit" name="clear" class="btn" id="clear__btn" value="Clear" disabled="true">
-    </div>
+
+      <p class="instruction__info">Now, guess a number between those two numbers!</p>
+
+      <div>
+        <label for="guess__btn"></label>
+        <input type="submit" name="guess" class="btn" id="guess__btn" value="Guess" disabled="true">
+
+        <label for="clear__btn"></label>
+        <input type="submit" name="clear" class="btn" id="clear__btn" value="Clear" disabled="true">
+      </div>
+    </form>
 
     <p>Your last guess was:</p>
     <p id="guess--display"></p>
