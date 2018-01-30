@@ -14,7 +14,7 @@ function showValue(e){
   e.preventDefault();
   var value = getValue();
   compareVals(value);
-  var guessDisplay = document.getElementById('guess--display');
+  var guessDisplay = document.getElementById('output__guess--display');
   guessDisplay.innerHTML = value;
 }
 
@@ -25,12 +25,11 @@ function getValue(){
 }
 
 function compareVals(value){
-  var compareResults = document.getElementById('compare--results');
+  var compareResults = document.getElementById('output__compare--results');
   var result; 
-  if (value > 100){
+
+  if (value > 100 || value < 1){
     result = "ERROR: That's out of range. <br/>Pick a number between 1 and 100."
-  } else if (value < 1){
-    result = "ERROR:: That's out of range. <br/>Pick a number between 1 and 100."
   } else if (Number.isNaN(value)){
     result = "ERROR: That isn't a number. <br/>Pick a number between 1 and 100."
   } else if (value < randomNum){
@@ -57,8 +56,4 @@ function clearInputField(){
 function resetGame(){
   window.location.reload(true);
 }
-
-
-
-
 
