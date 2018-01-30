@@ -49,7 +49,7 @@ main {
 }
 
 .btn {
-  background-color: #929497;
+  background-color: #D0D2D3;
   border-radius: 50px;
   color: #FFF;
   height: 2rem;
@@ -58,8 +58,8 @@ main {
   font-size: 1.6rem;
 }
 
-.btn:disabled {
-  background-color: #D0D2D3;
+.btn:enabled {
+  background-color: #929497;
 }
 
 #user--number {
