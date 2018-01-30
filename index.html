@@ -11,16 +11,21 @@
   </header>
 
   <main>
-    <label for="number__input"></label>
-    <input type="text" name="number" id="number__input" placeholder="Enter your guess">
+    <form>
+      <label for="min-number__input"></label>
+      <input type="text" name="number" class="number__input" id="min-number__input" placeholder="Add your low number here">
+      <br/>
+      <label for="max-number__input"></label>
+      <input type="text" name="number" class="number__input" id="max-number__input" placeholder="Add your high number here">
 
-    <div>
-      <label for="guess__btn"></label>
-      <input type="submit" name="guess" class="btn" id="guess__btn" value="Guess" disabled="true">
+      <div>
+        <label for="guess__btn"></label>
+        <input type="submit" name="guess" class="btn" id="guess__btn" value="Guess" disabled="true">
 
-      <label for="clear__btn"></label>
-      <input type="submit" name="clear" class="btn" id="clear__btn" value="Clear" disabled="true">
-    </div>
+        <label for="clear__btn"></label>
+        <input type="submit" name="clear" class="btn" id="clear__btn" value="Clear" disabled="true">
+      </div>
+    </form>
 
     <p class="output" id="output__last-guess">Your last guess was</p>
     <p class="output" id="output__guess--display">?</p>
