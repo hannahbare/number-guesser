@@ -35,18 +35,25 @@ main {
   text-align: center;
 }
 
-#number__input {
+.number__input {
   padding: 1.2rem .6rem;
-  margin: 2rem;
   height: 2rem;
   width: 32rem;
   font-weight: 300;
   font-size: 1.8rem;
 }
 
-#number__input::placeholder {
+.number__input::placeholder {
   color: #D0D2D3;
   font-size: 1.8rem;
+}
+
+#min-number__input {
+  margin-top: 1rem;
+}
+
+#max-number__input {
+  margin: 1rem 0;
 }
 
 .btn {
@@ -83,7 +90,7 @@ main {
 }
 
 #reset__btn {
-  margin-top: 4rem;
+  margin-top: 3rem;
   font-size: 1.4rem;
   height: 3rem;
   width: 32rem;

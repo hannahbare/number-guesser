@@ -38,6 +38,7 @@ function compareVals(value){
     result = "That's too high!"
   } else if (value === randomNum){
     result = "BOOM";
+    // levelUP();
   } compareResults.innerHTML = result;
 }
 
