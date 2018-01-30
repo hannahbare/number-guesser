@@ -1,9 +1,14 @@
+var userInput = document.getElementById('number__input');
 var guessBtn = document.getElementById('guess__btn');
-// var clearBtn = document.getElementById('clear__btn');
+var clearBtn = document.getElementById('clear__btn');
+var resetBtn = document.getElementById('reset__btn');
 var randomNum = Math.floor(Math.random()* 100)+1;
 console.log(randomNum);
 
 guessBtn.addEventListener('click', showValue);
+userInput.addEventListener('keyup', enableBtns);
+clearBtn.addEventListener('click', clearInputField);
+resetBtn.addEventListener('click', resetGame);
 
 function showValue(e){
   e.preventDefault();
@@ -14,7 +19,6 @@ function showValue(e){
 }
 
 function getValue(){
-  var userInput = document.getElementById('number__input');
   var stringValue = userInput.value;
   var parsedValue = parseInt(stringValue);
   return parsedValue;
@@ -29,7 +33,7 @@ function compareVals(value){
     result = "ERROR:: That's out of range. <br/>Pick a number between 1 and 100."
   } else if (Number.isNaN(value)){
     result = "ERROR: That isn't a number. <br/>Pick a number between 1 and 100."
-  } else if  (value < randomNum){
+  } else if (value < randomNum){
     result = "That's too low!"
   } else if (value > randomNum){
     result = "That's too high!"
@@ -37,4 +41,24 @@ function compareVals(value){
     result = "BOOM";
   } compareResults.innerHTML = result;
 }
+
+function enableBtns(value){
+  if( value != ''){
+    guessBtn.disabled = false;
+    clearBtn.disabled = false;
+    resetBtn.disabled = false;
+  }
+}
+
+function clearInputField(){
+  userInput.value = ' ';
+}
+
+function resetGame(){
+  window.location.reload(true);
+}
+
+
+
+
 
