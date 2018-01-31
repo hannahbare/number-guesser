@@ -4,13 +4,22 @@ var userInputBtn = document.querySelector('#userinput__submit');
 var guessBtn = document.getElementById('guess__btn');
 var clearBtn = document.getElementById('clear__btn');
 var resetBtn = document.getElementById('reset__btn');
-var randomNum = Math.floor(Math.random()* 100)+1;
 console.log(randomNum);
 
+userInputBtn.addEventListener('click', generateRandomNum);
 guessBtn.addEventListener('click', showValue);
 userInputMin.addEventListener('keyup', enableBtns);
 clearBtn.addEventListener('click', clearInputField);
 resetBtn.addEventListener('click', resetGame);
+
+function generateRandomNum(){
+  var userMinNum = userInputMin.value;
+  var minNum = parseInt(userMinNum);
+  
+  var randomNum = Math.floor(Math.random()* 100)+1;
+
+}
+
 
 function showValue(e){
   e.preventDefault();
