@@ -14,9 +14,11 @@ userInputBtn.addEventListener('click', generateRandomNum);
 function generateRandomNum(){
   var userMinNum = userInputMin.value;
   var minNum = parseInt(userMinNum);
+  console.log(minNum);
   var userMaxNum = userInputMax.value;
   var maxNum = parseInt(userMaxNum);
-  var randomNum = Math.floor(Math.random()* 100)+1;
+  console.log(maxNum);
+  var randomNum = Math.floor(Math.random()* (maxNum - minNum) + minNum)+1;
   console.log(randomNum);
 
 }
