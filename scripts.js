@@ -1,4 +1,5 @@
 var userInputMin = document.querySelector('#userinput__low');
+var userInputMax = document.querySelector('#userinput__high');
 var guessBtn = document.getElementById('guess__btn');
 var clearBtn = document.getElementById('clear__btn');
 var resetBtn = document.getElementById('reset__btn');
