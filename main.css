@@ -20,7 +20,7 @@ header {
 }
 
 h1 {
-  padding-top: .8rem;
+  padding-top: 1.5rem;
   color: #EB498B;
   font-size: 3.6rem;
   font-weight: 700;
@@ -33,34 +33,38 @@ h1 {
 
 main {
   text-align: center;
-}
-
-.number__input {
-  padding: 1.2rem .6rem;
-  height: 2rem;
-  width: 32rem;
   font-weight: 300;
-  font-size: 1.8rem;
 }
 
-.number__input::placeholder {
+p {
+  color: #404041;
+  font-size: 1.4rem;
+  margin: 1rem;
+}
+
+.instruction__info {
+  margin-bottom: .5rem;
+}
+
+.userinput--minmax {
+  padding: 1.2rem .4rem;
+  margin-right: .2rem;
+  height: 1.8rem;
+  width: 10rem;
+  font-size: 1.2rem;
+}
+
+#userinput__minmax::placeholder {
   color: #D0D2D3;
-  font-size: 1.8rem;
-}
-
-#min-number__input {
-  margin-top: 1rem;
-}
-
-#max-number__input {
-  margin: 1rem 0;
 }
 
 .btn {
-  margin-bottom: 3rem;
+  margin: .5rem;
   background-color: #D0D2D3;
   border-radius: 50px;
   color: #FFF;
+  height: 2.6rem;
+  width: 11rem;
   font-weight: 300;
   font-size: 1.8rem;
   height: 3rem;
@@ -68,30 +72,72 @@ main {
   letter-spacing: .2rem;
 }
 
-.btn:enabled {
-  background-color: #929497;
-}
-
 .btn:hover {
   background-color: #EB008B;
 }
 
+#range__btn:hover {
+  background-color: #EB008B;
+}
+
+.btn--wide {
+  width: 24rem;
+}
+
+.btn:enabled {
+  background-color: #929497;
+}
+
+.userinput__field {
+  margin:.8rem;
+  padding: 1.2rem .4rem;
+  height: 1.8rem;
+  font-size: 1.2rem;
+}
+
+#userinput__guess {
+  width: 22rem;
+}
+
 #guess__btn {
-  margin-right: 1.8rem;
+  margin-right: 1rem;
 }
 
-.output {
-  font-size: 1.8rem;
+.hide {
+  display: none;
 }
 
-#output__guess--display {
+.hidden__message {
+  font-weight: bold;
+}
+
+#guess--display {
   color: #EB008B;
-  font-size: 18rem;
+  font-size: 12rem;
 }
 
-#reset__btn {
-  margin-top: 3rem;
-  font-size: 1.4rem;
-  height: 3rem;
-  width: 32rem;
+@media (max-width: 400px){
+  
+  header {
+    height: 9rem;
+  }
+
+  p,
+  #userinput__guess,
+  .btn--wide {
+    width: 90%;
+  }
+
+  .userinput__field {
+    width: 7rem;
+  }
+
+  .btn {
+    height: 2.2rem;
+    font-size: 1.6rem;
+  }
+
+  #guess--display {
+    font-size: 9rem;
+  }
 }
