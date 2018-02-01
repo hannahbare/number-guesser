@@ -7,8 +7,8 @@
 
 var userInputMin = document.querySelector('#userinput__low');
 var userInputMax = document.querySelector('#userinput__high');
-var userGuess = document.querySelector('#userinput__guess');
 var setRangeBtn = document.querySelector('#range__btn');
+var userGuess = document.querySelector('#userinput__guess');
 var guessBtn = document.querySelector('#guess__btn');
 var clearBtn = document.querySelector('#clear__btn');
 var resetBtn = document.querySelector('#reset__btn');
@@ -47,6 +47,7 @@ function showValue(event){
   compareVals(guessVal);
   var displayNum = document.getElementById('guess--display');
   displayNum.innerHTML = guessVal;
+  hideInputFields();
 }
 
 function getValue(){
@@ -56,61 +57,67 @@ function getValue(){
 }
 
 
-function compareVals(guessVal){
-  var compareResults = document.getElementById('compare--results');
-  var result; 
-  compareResults.innerText = result;
-  switch(guessVal){ 
-    case guessVal > maxNum:
-      result = "That's too high! Pick a number between " + minNum + " and " + maxNum;
-      break;
-    case guessVal < minNum:
-      result = "That's too low! Pick a number between " + minNum + " and " + maxNum;
-      break;
-    case Number.isNaN(guessVal):
-      result = "ERROR: That isn't a number. Pick a number between " + minNum + " and " + maxNum;
-      break;
-    case guessVal < randomNum:
-      result = "That's too low!";
-      break;
-    case guessVal > randomNum:
-      result = "That's too high!";
-      break;
-    case guessVal === randomNum:
-      result = "BOOM";
-      levelUp();
-      break;
-    }
-}
-
 // function compareVals(guessVal){
 //   var compareResults = document.getElementById('compare--results');
 //   var result; 
-//   if (guessVal > maxNum){
-//     result = "That's too high! Pick a number between " + minNum + " and " + maxNum;
-//   } else if (guessVal < minNum){
-//     result = "That's too low! Pick a number between " + minNum + " and " + maxNum;
-//   } else if (Number.isNaN(guessVal)){
-//     result = "ERROR: That isn't a number. Pick a number between " + minNum + " and " + maxNum;
-//   } else if (guessVal < randomNum){
-//     result = "That's too low!"
-//   } else if (guessVal > randomNum){
-//     result = "That's too high!"
-//   } else if (guessVal === randomNum){
-//     result = "BOOM";
-//     levelUp();
-//   } compareResults.innerText = result;
+//   compareResults.innerText = result;
+//   switch(guessVal){ 
+//     case guessVal > maxNum:
+//       result = "That's too high! Pick a number between " + minNum + " and " + maxNum;
+//       break;
+//     case guessVal < minNum:
+//       result = "That's too low! Pick a number between " + minNum + " and " + maxNum;
+//       break;
+//     case Number.isNaN(guessVal):
+//       result = "ERROR: That isn't a number. Pick a number between " + minNum + " and " + maxNum;
+//       break;
+//     case guessVal < randomNum:
+//       result = "That's too low!";
+//       break;
+//     case guessVal > randomNum:
+//       result = "That's too high!";
+//       break;
+//     case guessVal === randomNum:
+//       result = "BOOM";
+//       levelUp();
+//       break;
+//     }
 // }
+
+function compareVals(guessVal){
+  var compareResults = document.getElementById('compare--results');
+  var result; 
+  if (guessVal > maxNum){
+    result = "That's out of range! Try again.";
+  } else if (guessVal < minNum){
+    result = "That's out of range! Try again.";
+  } else if (Number.isNaN(guessVal)){
+    result = "ERROR: That isn't a number. Pick a number between " + minNum + " and " + maxNum;
+  } else if (guessVal < randomNum){
+    result = "That's too low!"
+  } else if (guessVal > randomNum){
+    result = "That's too high!"
+  } else if (guessVal === randomNum){
+    result = "BOOM";
+    levelUp();
+  } compareResults.innerText = result;
+}
 
 function levelUp(){
   var levelUpInfo = document.querySelector('.hide');
   var tenLower = document.querySelector('.ten-lower');
   var tenHigher = document.querySelector('.ten-higher');
+  levelUpInfo.classList.remove('hide');
+  levelUpInfo.innerText = ('Nice work! Your range is now ' + minNum + ' through ' + maxNum);
   minNum = minNum - 10;
   maxNum = maxNum + 10;
   randomNumber();
-  levelUpInfo.classList.remove('hide');
-  levelUpInfo.innerText = ('Nice work! Your range is now ' + minNum + ' through ' + maxNum);
+}
+
+function hideInputFields(){
+  userInputMin.setAttribute('disabled', true);
+  userInputMax.setAttribute('disabled', true);
+  setRangeBtn.setAttribute('disabled', true);
 }
 
 function enableBtns(value){
