@@ -8,8 +8,8 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
   font-size: 20px;
+  font-weight: 300;
 }
 
 header {
@@ -32,14 +32,14 @@ h1 {
 }
 
 main {
-  text-align: center;
   font-weight: 300;
+  text-align: center;
 }
 
 p {
+  margin: 1rem;
   color: #404041;
   font-size: 1.4rem;
-  margin: 1rem;
 }
 
 .instruction__info {
@@ -47,11 +47,11 @@ p {
 }
 
 .userinput--minmax {
-  padding: 1.2rem .4rem;
   margin-right: .2rem;
+  padding: 1.2rem .4rem;
   height: 1.8rem;
-  width: 10rem;
   font-size: 1.2rem;
+  width: 10rem;
 }
 
 #userinput__minmax::placeholder {
@@ -64,12 +64,9 @@ p {
   border-radius: 50px;
   color: #FFF;
   height: 2.6rem;
-  width: 11rem;
   font-weight: 300;
-  font-size: 1.8rem;
-  height: 3rem;
-  width: 14rem;
-  letter-spacing: .2rem;
+  font-size: 1.6rem;
+  width: 11rem;
 }
 
 .btn:hover {
@@ -91,8 +88,8 @@ p {
 .userinput__field {
   margin:.8rem;
   padding: 1.2rem .4rem;
-  height: 1.8rem;
   font-size: 1.2rem;
+  height: 1.8rem;
 }
 
 #userinput__guess {
@@ -133,8 +130,8 @@ p {
   }
 
   .btn {
-    height: 2.2rem;
     font-size: 1.6rem;
+    height: 2.2rem;
   }
 
   #guess--display {
