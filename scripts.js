@@ -81,9 +81,9 @@ function levelUp(){
   var tenLower = document.querySelector('.ten-lower');
   var tenHigher = document.querySelector('.ten-higher');
   levelUpInfo.classList.remove('hide');
-  levelUpInfo.innerText = ('Nice work! Your range is now ' + minNum + ' through ' + maxNum);
   minNum = minNum - 10;
   maxNum = maxNum + 10;
+  levelUpInfo.innerText = ('Nice work! Your range is now ' + minNum + ' through ' + maxNum);
   randomNumber();
 }
 
@@ -94,7 +94,7 @@ function hideInputFields(){
 }
 
 function enableBtns(value){
-  if( value != ''){
+  if( minNum != '' && maxNum !='' && value != ''){
     guessBtn.disabled = false;
     clearBtn.disabled = false;
     resetBtn.disabled = false;
@@ -102,8 +102,6 @@ function enableBtns(value){
 }
 
 function clearInputField(){
-  userInputMin.value = ' ';
-  userInputMax.value = ' ';
   userGuess.value = ' ';
 }
 
