@@ -1,10 +1,3 @@
-//THINGS I WANT TO MAKE BETTER
-//1. less global variables
-//2. understand how to do second level of phase 3.
-//3. use a switch statment instead of if/else statements
-
-
-
 var userInputMin = document.querySelector('#userinput__low');
 var userInputMax = document.querySelector('#userinput__high');
 var setRangeBtn = document.querySelector('#range__btn');
@@ -16,9 +9,9 @@ var minNum = 0;
 var maxNum = 100;
 var randomNum;
 
-guessBtn.addEventListener('click', showValue);
 setRangeBtn.addEventListener('click', genNumber);
 userGuess.addEventListener('keyup', enableBtns);
+guessBtn.addEventListener('click', showValue);
 clearBtn.addEventListener('click', clearInputField);
 resetBtn.addEventListener('click', resetGame);
 
@@ -39,6 +32,14 @@ function maxNumber(){
 function randomNumber(){
   randomNum = Math.floor(Math.random() * (maxNum - minNum) + minNum) + 1;
   console.log('Watta cheata: ' + randomNum);
+}
+
+function enableBtns(value){
+  if( minNum != '' && maxNum !='' && value != ''){
+    guessBtn.disabled = false;
+    clearBtn.disabled = false;
+    resetBtn.disabled = false;
+  }
 }
 
 function showValue(event){
@@ -91,14 +92,6 @@ function hideInputFields(){
   userInputMin.setAttribute('disabled', true);
   userInputMax.setAttribute('disabled', true);
   setRangeBtn.setAttribute('disabled', true);
-}
-
-function enableBtns(value){
-  if( minNum != '' && maxNum !='' && value != ''){
-    guessBtn.disabled = false;
-    clearBtn.disabled = false;
-    resetBtn.disabled = false;
-  }
 }
 
 function clearInputField(){
