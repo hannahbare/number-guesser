@@ -13,17 +13,22 @@
   <main>
     <form>
       <p class="instruction__info">Enter your numbers below!</p>
-      <label for="userinput__min"></label>
-      <input type="text" name="number" id="userinput__low" placeholder="Enter min number">
 
-      <label for="userinput__max"></label>
-      <input type="text" name="number" id="userinput__high" placeholder="Enter max number">
+      <label for="userinput__low"></label>
+      <input type="text" name="number" class="userinput__field userinput--minmax" id="userinput__low" placeholder="Min number">
 
-      <label for = "range__btn"></label>
-      <input type="button" name="number" id="range__btn" class="range" value="Set range!">
+      <label for="userinput__high"></label>
+      <input type="text" name="number" class="userinput__field userinput--minmax" id="userinput__high" placeholder="Max number">
 
-      <label for="userinput__guess"></label>
-      <input type="text" name="number" id="userinput__guess" placeholder="Enter your guess">
+      <div>
+        <label for = "range__btn"></label>
+        <input type="button" name="number" class="btn btn--wide" id="range__btn" value="Set the range">
+      </div>
+
+      <div>
+        <label for="userinput__guess"></label>
+        <input type="text" name="number" class="userinput__field" id="userinput__guess" placeholder="Now enter your guess">
+      </div>
 
       <div>
         <label for="guess__btn"></label>
@@ -34,13 +39,14 @@
       </div>
     </form>
 
-    <p class="hide">Nice work! Your range is now <span class="ten-lower">10 lower</span> and <span class="ten-higher">10 higher</span></p>
+    <p class="hide hidden__message">Nice work! Your new range is now from<span class="ten-lower">10 lower</span> to <span class="ten-higher">10 higher</span></p>
     <p>Your last guess was:</p>
-    <p id="guess--display">?</p>
+    <p id="guess--display">???</p>
     <p id="compare--results"></p>
 
+
     <label for="reset__btn"></label>
-    <input type="submit" name="" class="btn" id="reset__btn" value="Reset" disabled="true">
+    <input type="submit" name="" class="btn btn--wide" id="reset__btn" value="Reset" disabled="true">
 
   </main>
   <script type="text/javascript" src="scripts.js" style="javascript"></script>

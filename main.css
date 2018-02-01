@@ -20,7 +20,7 @@ header {
 }
 
 h1 {
-  padding: .6rem;
+  padding-top: 1.5rem;
   color: #EB498B;
   font-size: 3rem;
   font-weight: 700;
@@ -28,44 +28,113 @@ h1 {
 
 #header__title {
   color: #E6E7E8;
+  font-weight: 300;
 }
 
 main {
   text-align: center;
-}
-
-#userinput__min {
-  padding: 1.2rem .4rem;
-  margin: 2rem;
-  height: 2rem;
-  width: 25rem;
   font-weight: 300;
-  font-size: 1.6rem;
 }
 
-#userinput__min::placeholder {
+p {
+  color: #404041;
+  font-size: 1.4rem;
+  margin: 1rem;
+}
+
+.instruction__info {
+  margin-bottom: .5rem;
+}
+
+.userinput--minmax {
+  padding: 1.2rem .4rem;
+  margin-right: .2rem;
+  height: 1.8rem;
+  width: 10rem;
+  font-size: 1.2rem;
+}
+
+#userinput__minmax::placeholder {
   color: #D0D2D3;
-  font-size: 1.6rem;
 }
 
 .btn {
+  margin: .5rem;
   background-color: #D0D2D3;
   border-radius: 50px;
   color: #FFF;
-  height: 2rem;
-  width: 10rem;
+  height: 2.6rem;
+  width: 11rem;
   font-weight: 300;
   font-size: 1.6rem;
+}
+
+.btn:hover {
+  background-color: #EB008B;
+}
+
+#range__btn:hover {
+  background-color: #EB008B;
+}
+
+.btn--wide {
+  width: 24rem;
 }
 
 .btn:enabled {
   background-color: #929497;
 }
 
+.userinput__field {
+  margin:.8rem;
+  padding: 1.2rem .4rem;
+  height: 1.8rem;
+  font-size: 1.2rem;
+}
+
+#userinput__guess {
+  width: 22rem;
+}
+
+#guess__btn {
+  margin-right: 1rem;
+}
+
 .hide {
   display: none;
 }
 
-#user--number {
-  font-size: 10rem;
+.hidden__message {
+  font-weight: bold;
+}
+
+#guess--display {
+  color: #EB008B;
+  font-size: 12rem;
+}
+
+@media (max-width: 400px){
+  
+  header {
+    height: 9rem;
+  }
+
+  p,
+  #userinput__guess,
+  .btn--wide {
+    width: 90%;
+  }
+
+  .userinput__field {
+    width: 7rem;
+  }
+
+  .btn {
+    height: 2.2rem;
+    font-size: 1.6rem;
+  }
+
+  #guess--display {
+    font-size: 9rem;
+  }
 }

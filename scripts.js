@@ -56,34 +56,6 @@ function getValue(){
   return guessedNum;
 }
 
-
-// function compareVals(guessVal){
-//   var compareResults = document.getElementById('compare--results');
-//   var result; 
-//   compareResults.innerText = result;
-//   switch(guessVal){ 
-//     case guessVal > maxNum:
-//       result = "That's too high! Pick a number between " + minNum + " and " + maxNum;
-//       break;
-//     case guessVal < minNum:
-//       result = "That's too low! Pick a number between " + minNum + " and " + maxNum;
-//       break;
-//     case Number.isNaN(guessVal):
-//       result = "ERROR: That isn't a number. Pick a number between " + minNum + " and " + maxNum;
-//       break;
-//     case guessVal < randomNum:
-//       result = "That's too low!";
-//       break;
-//     case guessVal > randomNum:
-//       result = "That's too high!";
-//       break;
-//     case guessVal === randomNum:
-//       result = "BOOM";
-//       levelUp();
-//       break;
-//     }
-// }
-
 function compareVals(guessVal){
   var compareResults = document.getElementById('compare--results');
   var result; 
@@ -99,6 +71,7 @@ function compareVals(guessVal){
     result = "That's too high!"
   } else if (guessVal === randomNum){
     result = "BOOM";
+    clearInputField();
     levelUp();
   } compareResults.innerText = result;
 }
@@ -129,7 +102,9 @@ function enableBtns(value){
 }
 
 function clearInputField(){
-  userInput.value = ' ';
+  userInputMin.value = ' ';
+  userInputMax.value = ' ';
+  userGuess.value = ' ';
 }
 
 function resetGame(){
