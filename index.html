@@ -12,21 +12,18 @@
 
   <main>
     <form>
-      <p class="instruction__info">What two numbers would you like to guess between?</p>
+      <p class="instruction__info">Enter your numbers below!</p>
       <label for="userinput__min"></label>
-      <input type="text" name="number" id="userinput__low" placeholder="Enter your guess">
+      <input type="text" name="number" id="userinput__low" placeholder="Enter min number">
 
       <label for="userinput__max"></label>
-      <input type="text" name="number" id="userinput__high" placeholder="This isn't working yet!">
+      <input type="text" name="number" id="userinput__high" placeholder="Enter max number">
 
-      <label for="userinput__submit"></label>
-      <input type="button" name="number" id="userinput__submit" value="Set Range">
-
-
-      <p class="instruction__info">Now, guess a number between those two numbers!</p>
+      <label for = "range__btn"></label>
+      <input type="button" name="number" id="range__btn" class="range" value="Set range!">
 
       <label for="userinput__guess"></label>
-      <input type="text" name="number" id="userinput__guess">
+      <input type="text" name="number" id="userinput__guess" placeholder="Enter your guess">
 
       <div>
         <label for="guess__btn"></label>
@@ -37,8 +34,9 @@
       </div>
     </form>
 
+    <p class="hide">Nice work! Your range is now <span class="ten-lower">10 lower</span> and <span class="ten-higher">10 higher</span></p>
     <p>Your last guess was:</p>
-    <p id="guess--display"></p>
+    <p id="guess--display">?</p>
     <p id="compare--results"></p>
 
     <label for="reset__btn"></label>
